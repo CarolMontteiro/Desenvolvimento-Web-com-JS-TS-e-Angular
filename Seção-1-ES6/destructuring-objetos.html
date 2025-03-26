@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="teste"></div>
+     <script>
+
+          // Desructuring assigment no contexto de objetos
+
+          let produto = {
+               descricao: 'celular',
+               preco: 2500,
+               detalhes: {
+                    fabricante: 'Abc',
+                    modelo:'Xyz'
+               }
+
+          }
+          // let {descricao, preco, desconto = 15} = produto
+
+          // console.log(descricao, preco, desconto)
+
+          // Extrair atributos de objetos pertencentes a atributos do objeto
+
+          let {descricao, detalhes: {fabricante, modelo}} = produto
+          console.log(descricao,fabricante, modelo)
+
+
+     </script>
+
+</body>
+</html>

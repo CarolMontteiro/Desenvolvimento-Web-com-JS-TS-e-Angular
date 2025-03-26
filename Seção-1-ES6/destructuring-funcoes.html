@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="teste"></div>
+     <script>
+        //Array
+        let array = [ 10,20,30,40]
+
+          //function teste([ a, b ]) { //destructuring
+          // function teste([a,b, ,c]) { //pulando valores
+          function teste([a,b, ,c, d = 100]) { // parâmetros padrões
+          console.log(a, b, c, d)
+        }
+
+          //teste(array)
+
+        // Objetos
+
+        let obj = {
+          a: 10,
+          b: 20,
+          c: 30,
+          d: 40
+        }
+
+        function teste2({a, b}) {
+          console.log(a,b)
+        }
+
+          //teste2(obj.a, obj.b)
+          teste2(obj)
+         
+     </script>
+
+</body>
+</html>

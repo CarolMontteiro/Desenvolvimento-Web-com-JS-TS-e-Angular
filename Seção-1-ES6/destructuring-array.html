@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="teste"></div>
+     <script>
+        
+          // Desructuring assigment no contexto de array
+
+          let frutas = ['uva', 'banana', 'manga', 'laranja']
+
+          let [ a, , b, c] = frutas
+
+          console.log(a, b, c)
+
+          let coisas = [['uva', 'banana', 'manga', 'laranja'],['Carol', 'Andre']]
+          let [, [,x]] = coisas
+
+          console.log(x)
+
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="teste"></div>
+     <script>
+
+          // Contexto Rest -> utilizado para econdensar 
+
+          // function soma(...numeros) {
+          //      let resultado = 0 
+
+          //      numeros.forEach( valor => resultado += valor)
+
+          //      return resultado
+          // }
+
+          // let x = soma(10, 5, 20, 15)
+          // console.log('resultado: ', x)
+
+          function multiplicacao(m,...n) {
+               // console.log(m)
+               // console.log(n)
+
+               let resultado = 0
+
+               n.forEach(valor => resultado += m * valor)
+
+               return resultado
+          }
+
+          let y = multiplicacao(5,2,3,4)
+          console.log('resultado: ', y)
+
+     </script>
+
+</body>
+</html>
