@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <script>
+
+          // Cada propriedade guarda 4 metadados, 1 value, 2 writable, 3 configurable e 4 enumerable
+
+          let obj = {
+               nome: 'Carol',
+               profissional: {
+                    site: 'carolmonteiro.com',
+                    profissao: 'Programadora'
+               },
+               hobbies: [
+                    {id: 1, hobbie: 'Jogar no video game'},
+                    {id: 2, hobbie: 'Autocuidado'}
+               ],
+               cidade: 'Belém'
+          }
+
+          // console.log(obj)
+          // console.log(Object.getOwnPropertyDescriptors(obj))
+
+          //----
+          // Descritor Writable: quando definido com o false, ele indica que o valor 
+          // da propriedade não poderá ser modificada
+
+
+          /*
+          Object.defineProperty(obj, 'nome', {
+               value: 'Ana Célia',
+               writable:false
+          })
+          console.log(Object.getOwnPropertyDescriptors(obj))
+          */
+
+
+
+          //----
+          // Descritor Enumerable: quando definido com o false, a propriedade em questão
+          // não é exibida em laços de repetição
+
+          /*
+          for(let propriedade in obj) {
+               console.log(propriedade, obj[propriedade])
+          }
+
+          Object.defineProperty(obj, 'hobbies', {
+               enumerable: false
+          })
+
+          Object.defineProperty(obj, 'profissional', {
+               enumerable: false
+          })
+
+          console.log(Object.getOwnPropertyDescriptors(obj))
+
+          console.log('--------------')
+          for(let propriedade in obj) {
+               console.log(propriedade, obj[propriedade])
+          }
+          */
+
+
+          //----
+          // Descritor Configurable: quando definido com o false, indica que a propriedade
+          // não poderá ser deletada e também não podemos mais modificar os descritores, exceto
+          //a mudaça de writable para false
+
+          console.log(Object.getOwnPropertyDescriptors(obj))
+
+          Object.defineProperty(obj, 'cidade', {
+               configurable: false
+          })
+          
+          console.log(Object.getOwnPropertyDescriptors(obj))
+          
+     </script>
+</body>
+</html>
