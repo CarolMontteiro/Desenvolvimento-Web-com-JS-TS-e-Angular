@@ -18,25 +18,23 @@
 
      // import{saudacao, getEndecoByCEP } from './import/lib.mjs';
 
-     document.querySelector('#btnSaudacao').addEventListener('click', () => {
-          import('./import/lib.mjs')
-               .then(module => console.log(module.saudacao()))
+     document.querySelector('#btnSaudacao').addEventListener('click', async () => {
+          
+          const modulo = await import('./import/lib.mjs')
+          console.log(modulo.saudacao())
           // console.log(saudacao());
      });
 
-     document.querySelector('#btnCEP').addEventListener('click', () => {
+     document.querySelector('#btnCEP').addEventListener('click', async () => {
           
           let cep = document.querySelector('#cep').value;
 
           if(cep.length == 8) {
 
-               import('./import/lib2.mjs')
-                    .then(module => {
-                         
-                         module.getEndecoByCEP(cep)
-                              .then(dados => console.log(dados));
+               let x = await import('./import/lib2.mjs')
 
-                    })
+               x.getEndecoByCEP(cep)
+                    .then(dados => console.log(dados));
                
           }
      });
