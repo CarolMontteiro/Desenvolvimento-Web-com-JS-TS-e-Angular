@@ -1,0 +1,25 @@
+<html>
+     <script>
+
+          const promise1 = new Promise((resolve, reject) => {
+               setTimeout(() => resolve('Promise1 resolvida'),3000)
+          })
+          
+          const promise2 = new Promise((resolve, reject) => {
+               setTimeout(() => resolve('Promise2 resolvida'),2000)
+          })
+
+          const promise3 = new Promise((resolve, reject) => {
+               setTimeout(() => resolve('Promise3 resolvida'),4000)
+          })
+          
+          let promises = [promise1, promise2, promise3]
+
+          Promise.any(promises)
+               .then((resolvida) => {
+                    console.log(resolvida)
+               })
+     
+          
+     </script>
+</html>
