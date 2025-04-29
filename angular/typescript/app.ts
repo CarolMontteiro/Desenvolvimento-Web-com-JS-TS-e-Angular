@@ -1,7 +1,9 @@
 
 
-let ola = (nome: string, sobrenome: string) => {
-     console.log("olá" + nome + sobrenome);
-     
-     ola("Carol", "Monteiro")
-}
+let mensagem: string = "Seja bem vindo"
+let temporadaFriends: number = 10
+let estudandoAngula: boolean = true
+let listaDeFrutas: Array<string> = ['uva', 'banana', 'laranja']
+let notasDasProvas: Array<number> = [9,7,8,9]
+
+mensagem = 'Eba'
