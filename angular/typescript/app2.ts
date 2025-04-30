@@ -22,12 +22,49 @@ class Carro {
      }
 }
 
-let carroA = new Carro('Palio', 4)
-console.log(carroA);
-carroA.acelerar()
-console.log(carroA);
-carroA.acelerar()
-carroA.acelerar()
-console.log(carroA);
+class Concessionaria {
+     private endreco: string
+     private listaDeCarros: any
 
+     constructor(endereco: string) {
+          this.endreco = endereco
+     }
 
+     public fornecerEndereco(): string {
+          return this.endreco
+     }
+
+     public mostrarListaDeCarros(): any {
+          return this.listaDeCarros
+     }
+}
+
+class Pessoa {
+     private nome: string
+     private carroPreferido: string
+     private carro: any
+
+     constructor(nome:string, carroPreferido: string) {
+          this.nome = nome
+          this.carroPreferido = carroPreferido
+     }
+
+     public dizerNome(): string {
+          return this.nome
+     }
+
+     public dizerCarroPreferido(): string {
+          return this.carroPreferido
+     }
+
+     public comprarCarro(carro: any): void {
+          this.carro = carro
+     }
+
+     public dizerCarroQueTem(): any {
+          this.carro
+     }
+}
+
+let pessoa = new Pessoa('Carol', 'Railux')
+console.log(pessoa.dizerCarroPreferido());

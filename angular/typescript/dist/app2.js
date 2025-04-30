@@ -23,7 +23,26 @@ class Concessionaria {
         return this.endreco;
     }
     mostrarListaDeCarros() {
+        return this.listaDeCarros;
     }
 }
-let concessionaria = new Concessionaria('Av Nazaré');
-console.log(concessionaria);
+class Pessoa {
+    constructor(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    dizerNome() {
+        return this.nome;
+    }
+    dizerCarroPreferido() {
+        return this.carroPreferido;
+    }
+    comprarCarro(carro) {
+        this.carro = carro;
+    }
+    dizerCarroQueTem() {
+        this.carro;
+    }
+}
+let pessoa = new Pessoa('Carol', 'Railux');
+console.log(pessoa.dizerCarroPreferido());
