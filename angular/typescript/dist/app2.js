@@ -17,10 +17,10 @@ class Carro {
 }
 class Concessionaria {
     constructor(endereco) {
-        this.endreco = endereco;
+        this.endereco = endereco;
     }
     fornecerEndereco() {
-        return this.endreco;
+        return this.endereco;
     }
     mostrarListaDeCarros() {
         return this.listaDeCarros;
@@ -41,8 +41,8 @@ class Pessoa {
         this.carro = carro;
     }
     dizerCarroQueTem() {
-        this.carro;
+        return this.carro;
     }
 }
-let pessoa = new Pessoa('Carol', 'Railux');
+let pessoa = new Pessoa('Carol', 'Pálio');
 console.log(pessoa.dizerCarroPreferido());
