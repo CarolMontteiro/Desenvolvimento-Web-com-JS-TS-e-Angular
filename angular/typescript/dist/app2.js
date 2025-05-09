@@ -53,4 +53,14 @@ let carroC = new Carro('Hilux', 4);
 let listaDeCarros = [carroA, carroB, carroC];
 let concessionaria = new Concessionaria('São joao da Ponta', listaDeCarros);
 /*----- EXIBIR A LISTA DE CARROS  -----*/
-console.log(concessionaria.mostrarListaDeCarros());
+// console.log(concessionaria.mostrarListaDeCarros());
+/*----- COMPRAR O CARRO  -----*/
+let cliente = new Pessoa('Carol', 'Hilux');
+// console.log(cliente.dizerCarroPreferido());
+concessionaria.mostrarListaDeCarros().map((carro) => {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        // comparar carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());
