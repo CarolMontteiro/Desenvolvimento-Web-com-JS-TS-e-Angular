@@ -1,25 +1,19 @@
-import { ConcessionariaDao } from './ConcessionariaDao'
+
+import { Dao } from './Dao'
 import Concessionaria from './Concessionaria'
-
-import { PessoaDao } from './PessoaDao'
 import Pessoa from './Pessoa'
-
-import { CarroDao } from './CarroDao'
 import Carro from './Carro'
 
 
 
-let dao: ConcessionariaDao = new ConcessionariaDao()
 let concessionaria = new Concessionaria('', [])
 
-dao.inserir(concessionaria)
-
-let dao2: PessoaDao = new PessoaDao()
 let pessoa: Pessoa = new Pessoa('','')
 
-dao2.atualizar(pessoa)
-
-let dao3: CarroDao = new CarroDao()
 let carro: Carro = new Carro('',1)
 
-dao3.remover(0)
+let dao2: Dao<Concessionaria> = new Dao<Concessionaria>()
+let dao3: Dao<Pessoa> = new Dao<Pessoa>()
+
+dao2.inserir(concessionaria)
+dao3.remover(2)
